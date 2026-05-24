@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import { Heart, MessageCircle } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -26,7 +26,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen font-sans selection:bg-saffron-200">
         <Navbar />
         <main>
@@ -85,6 +85,6 @@ export default function App() {
           </Link>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: '/gulshan-banani-sarbajanin-puja-foundation/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
