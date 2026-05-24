@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-saffron-50: #fdfaf2;
+  --color-saffron-100: #fff3d6;
+  --color-saffron-200: #ffe3a3;
+  --color-saffron-300: #ffcf66;
+  --color-saffron-400: #ffbb33;
+  --color-saffron-500: #FF9933;
+  --color-saffron-600: #e68522;
+  --color-saffron-700: #cc741a;
+
+  --color-maroon-800: #800000;
+  --color-maroon-900: #590000;
+  --color-maroon-950: #330000;
+
+  --color-gold-400: #e8c65f;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #b3922d;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-saffron-50);
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.pattern-bg {
+  background-image: radial-gradient(var(--color-gold-500) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
