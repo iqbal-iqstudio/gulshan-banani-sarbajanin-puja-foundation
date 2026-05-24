@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const committee = [
   {
@@ -32,7 +33,7 @@ export default function Committee() {
             Our Committee
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Meet the dedicated individuals who volunteer their time and energy to guide the foundation.
+            Meet the dedicated individuals for the 2026-2028 term who volunteer their time and energy to guide the foundation.
           </p>
         </div>
 
@@ -68,6 +69,15 @@ export default function Committee() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            to="/committee"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-maroon-800 hover:bg-maroon-900 text-white font-bold uppercase tracking-widest text-xs shadow-md transition-all hover:shadow-lg hover:scale-105"
+          >
+            View Full Committees<ArrowRight size={16} />
+          </Link>
         </div>
 
       </div>

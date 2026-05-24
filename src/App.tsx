@@ -15,6 +15,13 @@ import MembersPage from './components/MembersPage';
 import ContactPage from './components/ContactPage';
 import DonationPage from './components/DonationPage';
 import GenericPage from './components/GenericPage';
+import MissionVisionPage from './components/MissionVisionPage';
+import MessagePage from './components/MessagePage';
+import NewsPage from './components/NewsPage';
+import GetInvolvedPage from './components/GetInvolvedPage';
+import VolunteersPage from './components/VolunteersPage';
+import MembershipPage from './components/MembershipPage';
+import ScholarshipPage from './components/ScholarshipPage';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -29,27 +36,27 @@ export default function App() {
             {/* About */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about/history" element={<GenericPage title="Our History" />} />
-            <Route path="/about/mission" element={<GenericPage title="Mission & Vision" />} />
-            <Route path="/about/message" element={<GenericPage title="Message" />} />
+            <Route path="/about/mission" element={<MissionVisionPage />} />
+            <Route path="/about/message" element={<MessagePage />} />
             <Route path="/committee" element={<CommitteePage />} />
             <Route path="/members" element={<MembersPage />} />
 
             {/* Events / News */}
             <Route path="/news-events" element={<EventsPage />} />
-            <Route path="/news" element={<GenericPage title="News" />} />
+            <Route path="/news" element={<NewsPage />} />
 
             {/* Gallery */}
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/gallery/photo" element={<GalleryPage />} />
-            <Route path="/gallery/video" element={<GenericPage title="Video Gallery" />} />
-            <Route path="/gallery/honors" element={<GenericPage title="Honors" />} />
-            <Route path="/gallery/publication" element={<GenericPage title="Publication" />} />
+            <Route path="/gallery/video" element={<GalleryPage defaultCategory="video" />} />
+            <Route path="/gallery/honors" element={<GalleryPage defaultCategory="honors" />} />
+            <Route path="/gallery/publication" element={<GalleryPage defaultCategory="publication" />} />
 
             {/* Get Involved */}
-            <Route path="/get-involved" element={<GenericPage title="Get Involved" />} />
-            <Route path="/get-involved/volunteers" element={<GenericPage title="Volunteers" />} />
-            <Route path="/get-involved/membership" element={<GenericPage title="Membership" />} />
-            <Route path="/get-involved/scholarship" element={<GenericPage title="GBSPF Scholarship" />} />
+            <Route path="/get-involved" element={<GetInvolvedPage />} />
+            <Route path="/get-involved/volunteers" element={<VolunteersPage />} />
+            <Route path="/get-involved/membership" element={<MembershipPage />} />
+            <Route path="/get-involved/scholarship" element={<ScholarshipPage />} />
             <Route path="/get-involved/youth" element={<GenericPage title="Youth Activities" />} />
             <Route path="/get-involved/social" element={<GenericPage title="Social Services" />} />
 

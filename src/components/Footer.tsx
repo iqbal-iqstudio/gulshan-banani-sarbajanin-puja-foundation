@@ -3,12 +3,23 @@ import { Facebook, Youtube, Instagram, MapPin, Mail, Phone } from 'lucide-react'
 import logoImage from '../assets/images/regenerated_image_1779547298782.jpg';
 
 export default function Footer() {
+  const navLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'About Us', to: '/about' },
+    { label: 'Events', to: '/news-events' },
+    { label: 'Gallery', to: '/gallery' },
+    { label: 'News', to: '/news' },
+    { label: 'Contact', to: '/contact' },
+  ];
+
   return (
     <footer className="bg-white pt-16 pb-8 border-t border-gold-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7 gap-8 mb-12">
+        {/* Top row: Logo + Social (left), Navigation buttons (right) on desktop */}
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16 mb-12">
           
-          <div className="sm:col-span-2 lg:col-span-3 xl:col-span-2">
+          {/* Logo, Description & Social Icons - stays on left */}
+          <div className="lg:max-w-md xl:max-w-lg">
             <div className="flex items-center gap-3 mb-6">
               <img src={logoImage} alt="GBSPF Logo" className="h-[50px] w-auto object-contain rounded" />
               <span className="font-serif text-[20px] font-bold tracking-tight text-maroon-800 leading-tight">
@@ -35,6 +46,27 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
+          {/* Navigation Buttons - on right side on desktop, below on mobile */}
+          <div className="w-full lg:w-auto">
+            <h4 className="font-sans text-xs font-bold uppercase tracking-widest mb-6 text-maroon-800 lg:hidden">Quick Navigation</h4>
+            <div className="flex flex-wrap gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="px-5 py-2.5 rounded-lg bg-maroon-50 text-maroon-800 font-bold uppercase tracking-widest text-[10px] hover:bg-maroon-800 hover:text-white transition-all border border-maroon-200 hover:border-maroon-800"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom row: Quick Links, About GBSPF, Community, Media, Contact Info grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12 pt-12 border-t border-gold-500/30">
           
           <div>
             <h4 className="font-sans text-xs font-bold uppercase tracking-widest mb-6 text-maroon-800">Quick Links</h4>
