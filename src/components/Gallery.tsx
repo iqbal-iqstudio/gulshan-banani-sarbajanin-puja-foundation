@@ -60,7 +60,7 @@ export default function Gallery() {
               </p>
             </div>
             <a
-              href="/gallery/photo"
+              href="/gallery"
               className="flex-shrink-0 px-6 py-3 rounded-full border-2 border-gold-400 text-gold-400 font-semibold hover:bg-gold-400 hover:text-maroon-900 transition-colors"
             >
               Explore Gallery
